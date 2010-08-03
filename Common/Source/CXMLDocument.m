@@ -226,7 +226,8 @@ return(theData);
 {
 id root = [self rootElement];
 NSMutableString* xmlString = [NSMutableString string];
-[root _XMLStringWithOptions:options appendingToString:xmlString];
+//See http://github.com/PoeticSystems/TouchXML/commit/cc62577749f3fa540a5ac459646f1e437a30b542
+[xmlString appendString:[root XMLStringWithOptions:options]];
 return xmlString;
 }
 
